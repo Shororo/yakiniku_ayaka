@@ -113,4 +113,47 @@ $('.youkoso').on('inview', function() {
            //ブラウザの表示域に表示されたときに実行する処理
            $('.youkoso').toggleClass('showUp');
     });
+$('.title .hitokoto').on('inview', function() {
+           //ブラウザの表示域に表示されたときに実行する処理
+           $('.title .hitokoto').toggleClass('showUp');
+    });
+$('.title .logo').on('inview', function() {
+           //ブラウザの表示域に表示されたときに実行する処理
+           $('.title .logo').toggleClass('showUp');
+    });
+$('.title p').on('inview', function() {
+           //ブラウザの表示域に表示されたときに実行する処理
+           $('.title p').toggleClass('showUp');
+    });
+});
+
+$(function(){
+  $(".btn-c").on('click',function() {
+    if($(".btn-c").css("color") == "rgb(255, 255, 255)"){
+    $(".btn-c").css("color","rgb(255, 196, 27)").css("border-color","rgb(255, 196, 27)");
+    $(".btn-c").text("カウンター -");
+    $(".btn-k").css("color","white").css("border-color","white");
+    $(".btn-k").text("個室 +");
+    $(".counter").slideDown();
+    $(".koshitsu").slideUp();
+  }else if($(".btn-c").css("color") == "rgb(255, 196, 27)"){
+    $(".btn-c").css("color","white").css("border-color","white");
+    $(".btn-c").text("カウンター +");
+    $(".counter").slideUp();
+  }
+  });
+  $(".btn-k").on('click',function() {
+    if($(".btn-k").css("color") == "rgb(255, 255, 255)"){
+    $(".btn-c").css("color","white").css("border-color","white");
+    $(".btn-c").text("カウンター +");
+    $(".btn-k").css("color","rgb(255, 196, 27)").css("border-color","rgb(255, 196, 27)");
+    $(".btn-k").text("個室 -");
+    $(".counter").slideUp();
+    $(".koshitsu").slideDown();
+  }else if($(".btn-k").css("color") == "rgb(255, 196, 27)"){
+$(".btn-k").css("color","white").css("border-color","white");
+    $(".btn-k").text("個室 +");
+    $(".koshitsu").slideUp();
+  }
+  });
 });

@@ -183,19 +183,37 @@ img {
 .bg-white{
   background-color: white;
 }
+.bg-white-50{
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255,255,255, 0.3);
+}
+.bg-black{
+  background-color: black;
+}
 .clr-white{
   color: white;
-  filter: drop-shadow(1px 1px 1px rgba(0,0,0,1));
+}
+.text-shadow{
+filter: drop-shadow(2px 2px 1px rgba(0,0,0,1));
+}
+.flex-r{
+  display: flex; 
+  flex-wrap: wrap;
 }
 /* 丁度良いpaddingとmargin */
-.p-top2{
-    padding-top: 2rem;
-}
 .p-top3{
     padding-top: 3rem;
 }
+.p-top5{
+    padding-top: 5rem;
+}
 .p-bottom3{
     padding-bottom: 3rem;
+}
+.p-bottom5{
+    padding-bottom: 5rem;
 }
 .pd-3{
   padding-top: 3rem;
@@ -205,14 +223,17 @@ img {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.m-top2{
-    margin-top: 2rem;
-}
 .m-top3{
     margin-top: 3rem;
 }
+.m-top5{
+    margin-top: 5rem;
+}
 .m-bottom3{
     margin-bottom: 3rem;
+}
+.m-bottom5{
+    margin-bottom: 5rem;
 }
 .ma-3{
   margin-top: 3rem;
@@ -242,7 +263,7 @@ header{
   width: 100%;
   height: auto;
   /* 背景色は任意に変更 */
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .header-contents{
   width: 95%;
@@ -274,10 +295,10 @@ nav{
   top: 8.5vh;
   z-index:999;
   /* 任意のナビゲーションカラー */
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 nav li{
-  border-bottom: solid 1px rgba(255, 255, 255, 1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
 }
 nav a{
   display: block;
@@ -289,7 +310,7 @@ nav a:hover{
 }
 .nav-cover{
   display: none;
-  position: absolute;
+  position: fixed;
   top: 8.5vh;
   background-color: rgba(255, 255, 255, 0.2);
   /* 画像を表示させたい時用 */
@@ -372,6 +393,9 @@ nav a:hover{
   left: 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,1));
+  margin-top: 100px;
+  opacity: 0;
+  transition: 1.5s;
 }
 .title .logo{
   width: 90%;
@@ -380,6 +404,9 @@ nav a:hover{
   left: 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,1));
+  margin-top: 100px;
+  opacity: 0;
+  transition: 1.5s;
 }
 .title p{
   color: white;
@@ -390,6 +417,9 @@ nav a:hover{
   top: 90%;
   transform: translateY(-50%);
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,1));
+  margin-top: 100px;
+  opacity: 0;
+  transition: 1.5s;
 }
 .title a{
   color: white;
@@ -463,6 +493,7 @@ nav a:hover{
   position: fixed;
   top: 0;
   z-index: -1;
+  filter: blur(3px) brightness(60%);
 }
 /* #haikeiここまで */
 
@@ -483,7 +514,7 @@ nav a:hover{
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  margin-top: 60px;
+  margin-top: 100px;
   opacity: 0;
   transition: 1.5s;
 }
@@ -494,12 +525,24 @@ nav a:hover{
   color: red;
 }
 .showUp {
-  opacity: 1;
-  margin-top: 0;
+  opacity: 1 !important;
+  margin-top: 0 !important;
 }
 /* youkosoここまで */
 
 #system{
+}
+.btn-c, .btn-k{
+  font-size: 2.3rem;
+  width: 100%;
+  border: 0.1rem solid white;
+  border-radius: 1.5rem; 
+}
+.counter h1, .koshitsu h1{
+  font-size: 2.5rem;
+}
+.counter, .koshitsu{
+  display: none;
 }
 /* footerここから */
 footer{
@@ -513,4 +556,4 @@ footer a{
 .footer_youso img{
   height: 15rem;
 }
-/* footerここまで 
+/* footerここまで */
