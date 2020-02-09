@@ -195,6 +195,9 @@ img {
 .clr-white{
   color: white;
 }
+.clr-black{
+  color: black;
+}
 .text-shadow{
 filter: drop-shadow(2px 2px 1px rgba(0,0,0,1));
 }
@@ -202,7 +205,16 @@ filter: drop-shadow(2px 2px 1px rgba(0,0,0,1));
   display: flex; 
   flex-wrap: wrap;
 }
+.dsp-none{
+  display: none;
+}
+.bg-usui{
+  background-color: #fff0ef;
+}
 /* 丁度良いpaddingとmargin */
+.p-top1{
+    padding-top: 1.5rem;
+}
 .p-top3{
     padding-top: 3rem;
 }
@@ -252,8 +264,15 @@ filter: drop-shadow(2px 2px 1px rgba(0,0,0,1));
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.contents-small{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 /* headerここから */
 /* モバイル用 */
@@ -493,7 +512,7 @@ nav a:hover{
   position: fixed;
   top: 0;
   z-index: -1;
-  filter: blur(3px) brightness(60%);
+  filter: blur(3px) brightness(55%);
 }
 /* #haikeiここまで */
 
@@ -507,7 +526,7 @@ nav a:hover{
   height: 100%;
   top: 0;
   position: absolute;
-  filter: opacity(15%);
+  filter: opacity(20%);
 }
 .youkoso{
   top: 50%;
@@ -517,6 +536,7 @@ nav a:hover{
   margin-top: 100px;
   opacity: 0;
   transition: 1.5s;
+  filter: drop-shadow(2px 2px 2px rgba(143,76,255,1));
 }
 .youkoso img{
   width: 20rem;
@@ -530,20 +550,42 @@ nav a:hover{
 }
 /* youkosoここまで */
 
-#system{
+#system img{
+  height: 30vh;
 }
 .btn-c, .btn-k{
   font-size: 2.3rem;
   width: 100%;
-  border: 0.1rem solid white;
-  border-radius: 1.5rem; 
+  border: 0.1rem solid rgb(255, 255, 255,1);
+  border-radius: 1.5rem;
+  color: white;
+}
+.btn-c{
+  color: rgb(255, 247, 0);
+  border-color: rgb(255, 247, 0);
 }
 .counter h1, .koshitsu h1{
   font-size: 2.5rem;
 }
-.counter, .koshitsu{
+.koshitsu{
   display: none;
 }
+.course-3{
+  margin-top: 100px;
+  opacity: 0;
+  transition: 2s;
+}
+.course-title{
+  font-size: 2rem;
+}
+.course-image{
+  height: 30vh;
+}
+.course-nedan{
+  color: #d40000;
+  text-align: left;
+}
+
 /* footerここから */
 footer{
   background-color: rgba(255, 255, 255, 1);

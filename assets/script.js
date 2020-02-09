@@ -91,69 +91,94 @@ $(window).on('load',function(){
     });
 
 //特定の位置までスクロールしたら背景画像を差し替える
-      var thisOffset;
+var thisOffset;
 $(window).on('load',function(){
-    thisOffset = $('#hazimeni').offset().top + $('#hazimeni').outerHeight();
+  thisOffset = $('#hazimeni').offset().top + $('#hazimeni').outerHeight();
 });
 
 $(window).scroll(function(){
-    if( $(window).scrollTop() + $(window).height() > thisOffset){
+  if( $(window).scrollTop() + $(window).height() > thisOffset){
         // 特定の要素を超えた場合のイベント
         $("#haikei").css("display","block");
         //$('.image').children('img').attr('src', '//into-the-program.com/demo/images/sample002.jpg');
-    } else {
+      } else {
         // 特定の要素を超えていないイベント
         $("#haikei").css("display","none");
-    }
-});
+      }
+    });
 
 
 $(function(){
-$('.youkoso').on('inview', function() {
+  $('.youkoso').on('inview', function() {
            //ブラウザの表示域に表示されたときに実行する処理
-           $('.youkoso').toggleClass('showUp');
-    });
-$('.title .hitokoto').on('inview', function() {
+           if($('.youkoso').css("opacity") == "0"){
+             $('.youkoso').toggleClass('showUp');
+           }
+         });
+  $('.title .hitokoto').on('inview', function() {
            //ブラウザの表示域に表示されたときに実行する処理
-           $('.title .hitokoto').toggleClass('showUp');
-    });
-$('.title .logo').on('inview', function() {
+           if($('.title .hitokoto').css("opacity") == "0"){
+             $('.title .hitokoto').toggleClass('showUp');
+           }
+         });
+  $('.title .logo').on('inview', function() {
            //ブラウザの表示域に表示されたときに実行する処理
-           $('.title .logo').toggleClass('showUp');
-    });
-$('.title p').on('inview', function() {
+           if($('.title .logo').css("opacity") == "0"){
+             $('.title .logo').toggleClass('showUp');
+           }
+         });
+  $('.title p').on('inview', function() {
            //ブラウザの表示域に表示されたときに実行する処理
-           $('.title p').toggleClass('showUp');
-    });
+           if($('.title p').css("opacity") == "0"){
+             $('.title p').toggleClass('showUp');
+           }
+         });
+  $('.course-3').on('inview', function() {
+           //ブラウザの表示域に表示されたときに実行する処理
+           if($(this).css("opacity") == "0"){
+             $(this).toggleClass('showUp');
+           }
+         });
 });
+
 
 $(function(){
   $(".btn-c").on('click',function() {
     if($(".btn-c").css("color") == "rgb(255, 255, 255)"){
-    $(".btn-c").css("color","rgb(255, 196, 27)").css("border-color","rgb(255, 196, 27)");
-    $(".btn-c").text("カウンター -");
-    $(".btn-k").css("color","white").css("border-color","white");
-    $(".btn-k").text("個室 +");
-    $(".counter").slideDown();
-    $(".koshitsu").slideUp();
-  }else if($(".btn-c").css("color") == "rgb(255, 196, 27)"){
-    $(".btn-c").css("color","white").css("border-color","white");
-    $(".btn-c").text("カウンター +");
-    $(".counter").slideUp();
-  }
+      $(".btn-c").css("color","rgb(255, 247, 0)").css("border-color","rgb(255, 247, 0)");
+      $(".btn-k").css("color","white").css("border-color","rgb(0,0,0,0)");
+      $(".counter").show();
+      $(".koshitsu").hide();
+    }else if($(".btn-c").css("color") == "rgb(255, 247, 0)"){
+      $(".btn-c").css("color","white").css("border-color","rgb(0,0,0,0)");
+      $(".counter").hide();
+    }
   });
   $(".btn-k").on('click',function() {
     if($(".btn-k").css("color") == "rgb(255, 255, 255)"){
-    $(".btn-c").css("color","white").css("border-color","white");
-    $(".btn-c").text("カウンター +");
-    $(".btn-k").css("color","rgb(255, 196, 27)").css("border-color","rgb(255, 196, 27)");
-    $(".btn-k").text("個室 -");
-    $(".counter").slideUp();
-    $(".koshitsu").slideDown();
-  }else if($(".btn-k").css("color") == "rgb(255, 196, 27)"){
-$(".btn-k").css("color","white").css("border-color","white");
-    $(".btn-k").text("個室 +");
-    $(".koshitsu").slideUp();
-  }
+      $(".btn-c").css("color","white").css("border-color","rgb(0,0,0,0)");
+      $(".btn-k").css("color","rgb(255, 247, 0)").css("border-color","rgb(255, 247, 0)");
+      $(".counter").hide();
+      $(".koshitsu").show();
+    }else if($(".btn-k").css("color") == "rgb(255, 247, 0)"){
+      $(".btn-k").css("color","white").css("border-color","rgb(0,0,0,0)");
+      $(".koshitsu").hide();
+    }
+  });
+  $(".btn-k, .btn-c").on('click',function() {
+    if($(".btn-k").css("color") == "rgb(255, 255, 255)" && $(".btn-c").css("color") == "rgb(255, 255, 255)"){
+      $(".btn-k").css("border-color","rgb(255, 255, 255)");
+      $(".btn-c").css("border-color","rgb(255, 255, 255)");
+    }
+  });
+  // コース詳細ボタンを押したら
+  $(".course-shousai-btn1").on('click',function() {
+    $(".course-shousai1").slideToggle();
+  });
+  $(".course-shousai-btn2").on('click',function() {
+    $(".course-shousai2").slideToggle();
+  });
+  $(".course-shousai-btn3").on('click',function() {
+    $(".course-shousai3").slideToggle();
   });
 });
