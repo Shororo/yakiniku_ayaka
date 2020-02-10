@@ -41,19 +41,25 @@
 	<div class="nav-cover"></div>
 
 	<div class="title">
-		<div class="slider">
-			<div><img src="images/karubi.jpg" alt=""></div>
-			<div><img src="images/kushimori_tare.jpg" alt=""></div>
-			<div><img src="images/harami.jpg" alt=""></div>
-			<div><img src="images/yakiniku.jpg" alt=""></div>
+		<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-interval=3000 data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="images/karubi.jpg" alt="">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="images/kushimori_tare.jpg" alt="">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="images/harami.jpg" alt="">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="images/yakiniku.jpg" alt="">
+				</div>
+			</div>
 		</div>
 		<img class="hitokoto" src="material/subtitle_white.png" alt="一言">
 		<img class="logo" src="material/yakitori_ayaka_logo_white.png" alt="タイトルロゴ">
 		<p>TEL：<a href="tel:000-1s34-5s78">000-1234-5678</a></p>
-	</div>
-
-	<div id="haikei">
-		<img src="images/IMGP2560.jpg" alt="">
 	</div>
 
 	<div class="main">
@@ -176,9 +182,49 @@
 				</div>
 			</div>
 		</div>
+		
+	<!-- メニュー -->
+	<div class="menu center pd-5 clr-white">
+		<h1 class="p-bottom3">メニュー</h1>
+		<div class="bg-white-50">
+			<div class="contents">
+				<div class="row">
+						<!-- メニュー -->
+					<div class="assignment-source col-6 col-sm-3">
+					    <img class="assignment-img" src="images/a0249.jpg" alt="">
+					    <p class="assignment-title">ネギま</p>
+					    <p class="assignment-price">120円</p>
+					    <p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+					</div>
+					<div class="assignment-source col-6 col-sm-3">
+					    <img class="assignment-img" src="images/a0249.jpg" alt="">
+					    <p class="assignment-title">ネギま</p>
+					    <p class="assignment-price">120円</p>
+					    <p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+					</div>
+					<div class="assignment-source col-6 col-sm-3">
+					    <img class="assignment-img" src="images/a0249.jpg" alt="">
+					    <p class="assignment-title">ネギま</p>
+					    <p class="assignment-price">120円</p>
+					    <p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+					</div>
+					<div class="assignment-source col-6 col-sm-3">
+					    <img class="assignment-img" src="images/a0249.jpg" alt="">
+					    <p class="assignment-title">ネギま</p>
+					    <p class="assignment-price">120円</p>
+					    <p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+					</div>
+					<div id="menu-plus"></div>
+				</div>
+				<p id="motto">もっと見る</p>
+			</div>
+		</div>
+	</div>
+
 
 	</div>
 
+	<!-- フッター -->
 	<footer class="p-top5">
 		<div class="footer_youso"><img src="material/yakitori_ayaka_logo_black.png" alt="お店のロゴ">
 			<p class="p-top3">〒58s-45s54 住所xxxx-x</p>
@@ -190,6 +236,25 @@
 			<small>2020 yakitori ayaka</small>
 		</div>
 	</footer>
+
+	<!-- メニュー詳細画面 -->
+	<div class="shosai">
+	    <div class="shosai-contents">
+	        <img class="shosai-logo" src="material/yakitori_ayaka_logo_black.png" alt="ロゴ">
+	        <img class="item-img" src="画像が代入される" alt="">
+	        <div class="scroll">
+	            <p class="item-title">タイトルが代入される</p>
+	            <p class="item-price">値段が代入される</p>
+	            <p class="item-text">説明文が代入される</p>
+	        </div>
+	    </div>
+	</div>
+	<div class="shosai-out"></div>
+	
+	<!-- 背景画像 -->
+	<div id="haikei">
+		<img src="images/IMGP2560.jpg" alt="">
+	</div>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
