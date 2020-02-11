@@ -98,6 +98,7 @@ $(function(){
   //ローディングが終わったら画面表示
   Pace.on('done', function(){
     $('.wrap').fadeIn();
+    $("#loading-window").css("display","none");
   });
 
 		//ボタン全般処理
@@ -179,15 +180,22 @@ $(function(){
       });
       //メニューを閉じる
       $("#toziru").on("click", function(){
-        $("#menu-plus").remove();
+        $("#menu-plus").css("display","none");
         $("#motto").css("display","block");
         $("#toziru").css("display","none");
       });
 
       //メールフォームの出現
       $("#mailform").on("click",function() {
-        $(".googleform").slideToggle();
-      });                         
+        $(".googleform").slideDown();
+        $("#mailform").css("display","none");
+        $("#mailform2").css("display","block");
+      });
+      $("#mailform2").on("click",function() {
+        $(".googleform").slideUp();
+        $("#mailform").css("display","block");
+        $("#mailform2").css("display","none");
+      });                      
 
     });
 

@@ -820,3 +820,6 @@ footer a{
   margin-top:-8.5vh;
   padding-top:8.5vh;
 }
+#mailform2{
+  display: none;
+}
