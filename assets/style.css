@@ -587,16 +587,14 @@ nav a:hover{
   position: relative;
 }
 .sinchaku-item img{
-  height: 40%;
+  height: 50%;
 }
 .sinchaku-item .carousel-caption{
-  height: 50%;
+  height: 40%;
   overflow: scroll;
-}
-.carousel-caption{
-  position: absolute;
+    position: absolute;
   transform: translateX(-50%); 
-  top: 50%;
+  bottom: 0;
   left: 50%;
 }
 /* インスタニュースここまで */
