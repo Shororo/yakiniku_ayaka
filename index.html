@@ -8,6 +8,9 @@
 	<script src="https://kit.fontawesome.com/7c414374ac.js" crossorigin="anonymous"></script>
 	<!-- google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Montserrat|Noto+Serif+JP|Sawarabi+Mincho&display=swap" rel="stylesheet">
+	<!-- ローディング画面の生成 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-center-circle.min.css" />
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- bxSlider CSS -->
@@ -17,277 +20,308 @@
 	<title>焼き肉 ～彩香～</title>
 </head>
 <body>
-
-	<header>
-		<div class="header-contents">
-			<a href="#"><img class="logo" src="material/yakitori_ayaka_logo_white.png" alt="ロゴ"></a>
-			<img class="navigation" src="material/navigation_white.png" alt="ナビゲーションバー">
-		</div>
-	</header>
-
-	<nav>
-		<ul>
-			<li><a href="#">トップ</a></li>
-			<li><a href="#id1">お店のシステム</a></li>
-			<li><a href="#id2">コース</a></li>
-			<li><a href="#id3">メニュー</a></li>
-			<li><a href="#id4">お店のこだわり</a></li>
-			<li><a href="#id5">アクセス</a></li>
-			<li><a href="#id5">ご予約・お問い合わせ</a></li>
-		</ul>
-	</nav>
-
-	<div class="nav-cover"></div>
-
-	<div class="title">
-		<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-interval=3000 data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100" src="images/karubi.jpg" alt="">
+	<div id="loading-window"></div>
+	<div class="pace-running">
+		<div class="wrap">
+			<header>
+				<div class="header-contents">
+					<a href="#"><img class="logo" src="material/yakitori_ayaka_logo_white.png" alt="ロゴ"></a>
+					<img class="navigation" src="material/navigation_white.png" alt="ナビゲーションバー">
 				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="images/kushimori_tare.jpg" alt="">
+			</header>
+
+			<nav>
+				<ul>
+					<li><a href="#">トップ</a></li>
+					<li><a href="#system">お店のシステム</a></li>
+					<li><a href="#course">コース</a></li>
+					<li><a href="#menu">メニュー</a></li>
+					<li><a href="#news">新着情報</a></li>
+					<li><a href="#otoiawase">アクセス・お問合せ</a></li>
+				</ul>
+			</nav>
+
+			<div class="nav-cover"></div>
+
+			<div class="title">
+				<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-interval=3000 data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="images/karubi.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/kushimori_tare.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/harami.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/yakiniku.jpg" alt="">
+						</div>
+					</div>
 				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="images/harami.jpg" alt="">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="images/yakiniku.jpg" alt="">
-				</div>
+				<img class="hitokoto" src="material/subtitle_white.png" alt="一言">
+				<img class="logo" src="material/yakitori_ayaka_logo_white.png" alt="タイトルロゴ">
+				<p>TEL：<a href="tel:000-1s34-5s78">000-1234-5678</a></p>
 			</div>
-		</div>
-		<img class="hitokoto" src="material/subtitle_white.png" alt="一言">
-		<img class="logo" src="material/yakitori_ayaka_logo_white.png" alt="タイトルロゴ">
-		<p>TEL：<a href="tel:000-1s34-5s78">000-1234-5678</a></p>
-	</div>
 
-	<div class="main">
-		<div id="hazimeni" class="bg-white">
-			<img class="izakaya" src="images/izakaya.jpg" alt="">
-			<div class="youkoso center contents">
-				<h1>本日の夕食<br>焼肉"<span>彩香</span>"へようこそ</h1>
-				<p class="p-top5">当店は完全個室と、一人焼肉用のカウンターをご用意しております。</p>
-				<p class="p-top3">グループやカップルで、夕食に一人焼肉等、お気軽にお立ち寄りください。</p>
-				<img class="p-top5" src="material/yakitori_ayaka_logo_black.png" alt="ロゴ">
-			</div>
-		</div>
+			<div class="main">
+				<div id="hazimeni" class="bg-white">
+					<img class="izakaya" src="images/izakaya.jpg" alt="">
+					<div class="youkoso center contents">
+						<h1>本日の夕食<br>焼肉"<span>彩香</span>"へようこそ</h1>
+						<p class="p-top5">当店は完全個室と、一人焼肉用のカウンターをご用意しております。</p>
+						<p class="p-top3">グループやカップルで、夕食に一人焼肉等、お気軽にお立ち寄りください。</p>
+						<img class="p-top5" src="material/yakitori_ayaka_logo_black.png" alt="ロゴ">
+					</div>
+				</div>
 
-		<div id="system" class="center p-top5 p-bottom5">
-			<h1 class="clr-white text-shadow">お店のシステム</h1>
-			<div class="flex-r p-top5 p-bottom3 clr-black text-shadow">
-				<div class="col-6">
-					<p class="btn-c">カウンター</p>
+				<div id="system">
+					<div class="center p-top5 p-bottom5">
+						<h1 class="clr-white text-shadow">お店のシステム</h1>
+						<div class="flex-r p-top5 p-bottom3 clr-black text-shadow">
+							<div class="col-6">
+								<p class="btn-c">カウンター</p>
+							</div>
+							<div class="col-6">
+								<p class="btn-k">個室</p>
+							</div>
+						</div>
+						<div class="bg-white-50">
+							<div class="counter clr-white contents text-shadow">
+								<h1 class="p-bottom3">お一人様から、どうぞ</h1>
+								<img src="images/counter.jpg" alt="カウンター席">
+								<p class="p-top3">夕食に美味しい焼肉が食べたい。</p>
+								<p>でも焼肉店に一人で入るのはちょっと。。。</p>
+								<p>そんなあなたのお悩み、解決いたします！</p>
+								<p>カウンター席で周りを気にせずガッツリお召し上がりください。</p>
+							</div>
+						</div>
+						<div class="bg-white-50">
+							<div class="koshitsu clr-white contents text-shadow">
+								<h1 class="p-bottom3">お友達、彼女と</h1>
+								<img src="images/koshitsu.jpg" alt="個室">
+								<p class="p-top3">全テーブル完全個室！</p>
+								<p>焼肉店では中々見られない、最高のプライベート空間</p>
+								<p>仲の良いお友達と、家族みんなで、</p>
+								<p>大好きなあの人と大満足のディナーを。</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-6">
-					<p class="btn-k">個室</p>
-				</div>
-			</div>
-			<div class="bg-white-50">
-				<div class="counter clr-white contents text-shadow">
-					<h1 class="p-bottom3">お一人様から、どうぞ</h1>
-					<img src="images/counter.jpg" alt="カウンター席">
-					<p class="p-top3">夕食に美味しい焼肉が食べたい。</p>
-					<p>でも焼肉店に一人で入るのはちょっと。。。</p>
-					<p>そんなあなたのお悩み、解決いたします！</p>
-					<p>カウンター席で周りを気にせずガッツリお召し上がりください。</p>
-				</div>
-			</div>
-			<div class="bg-white-50">
-				<div class="koshitsu clr-white contents text-shadow">
-					<h1 class="p-bottom3">お友達、彼女と</h1>
-					<img src="images/koshitsu.jpg" alt="個室">
-					<p class="p-top3">全テーブル完全個室！</p>
-					<p>焼肉店では中々見られない、最高のプライベート空間</p>
-					<p>仲の良いお友達と、家族みんなで、</p>
-					<p>大好きなあの人と大満足のディナーを。</p>
-				</div>
-			</div>
-		</div>
 
-		<div id="course" class="center bg-white pd-5">
-			<h1>コース紹介</h1>
-			<div class="course-3 contents-small">
-				<p class="course-title">コース：紫陽花[あじさい]</p>
-				<img class="course-image" src="images/course01.jpg" alt="">
-				<p class="course-text p-top1">
-					スタンダードコース 黒毛和牛に冷麺も味わえる、満足の組み合わせ。
-				</p>
-				<p class="course-nedan">2980円(+税)</p>
-				
-				<p class="course-shousai-btn1">コース詳細+</p>
-				<div class="course-shousai1 dsp-none">
-					<p class="course-daimoku">-前菜-</p>
-					<p class="course-sina">キムチ3種盛
-						サラダ
-					オードブル3種（ヒレの湯引きユッケ・イカ刺し・ゆで豚ポッサム）</p>
-					<p class="course-daimoku">-焼物-</p>
-					<p class="course-sina">厚切りタン塩・大海老
-					カルビ・ハラミ・赤身ロース・トントロ・ホルモン</p>
-					<p class="course-daimoku">-お食事-</p>
-					<p class="course-sina">冷麺</p>
-					<p class="course-daimoku">-デザート-</p>
-					<p class="course-sina">本日のデザート</p>
-					<p class="arerugi">アレルギー表示：卵、乳、小麦、海老</p>
-				</div>
-			</div>
-			<div class="bg-usui">
-				<div class="course-3 contents-small">
-					<p class="course-title">コース：椿[つばき]</p>
-					<img class="course-image" src="images/course02.jpg" alt="">
-					<p class="course-text p-top1">
-						ペシャルコース サーロイン握りからしめの究極飯まで。 彩香を味わい尽くす、お得なコース。
-					</p>
-					<p class="course-nedan">3600円(+税)</p>
+				<div id="course">
+					<div class="center bg-white pd-5">
+						<h1>コース紹介</h1>
+						<div class="course-3 contents-small">
+							<p class="course-title">コース：紫陽花[あじさい]</p>
+							<img class="course-image" src="images/course01.jpg" alt="">
+							<p class="course-text p-top1">
+								スタンダードコース 黒毛和牛に冷麺も味わえる、満足の組み合わせ。
+							</p>
+							<p class="course-nedan">2980円(+税)</p>
 
-					<p class="course-shousai-btn2">コース詳細+</p>
-					<div class="course-shousai2 dsp-none">
-						<p class="course-daimoku">-前菜-</p>
-						<p class="course-sina">キムチ3種盛
-							サラダ
-						オードブル4種（ヒレの湯引きユッケ・イカ刺し・ゆで豚ポッサム・サーロイン握り）</p>
-						<p class="course-daimoku">-焼物-</p>
-						<p class="course-sina">特選サーロイン・特選ハラミ
-						厚切り上タン塩・カルビ・ヒレ・大海老・ホルモン</p>
-						<p class="course-daimoku">-お食事-</p>
-						<p class="course-sina">サーロインと濃厚卵の究極小鉢飯</p>
-						<p class="course-daimoku">-デザート-</p>
-						<p class="course-sina">本日のデザート</p>
-						<p class="arerugi">アレルギー表示：卵、乳、小麦、海老</p>
+							<p class="course-shousai-btn1">コース詳細+</p>
+							<div class="course-shousai1 dsp-none">
+								<p class="course-daimoku">-前菜-</p>
+								<p class="course-sina">キムチ3種盛
+									サラダ
+								オードブル3種（ヒレの湯引きユッケ・イカ刺し・ゆで豚ポッサム）</p>
+								<p class="course-daimoku">-焼物-</p>
+								<p class="course-sina">厚切りタン塩・大海老
+								カルビ・ハラミ・赤身ロース・トントロ・ホルモン</p>
+								<p class="course-daimoku">-お食事-</p>
+								<p class="course-sina">冷麺</p>
+								<p class="course-daimoku">-デザート-</p>
+								<p class="course-sina">本日のデザート</p>
+								<p class="arerugi">アレルギー表示：卵、乳、小麦、海老</p>
+							</div>
+						</div>
+						<div class="bg-usui">
+							<div class="course-3 contents-small">
+								<p class="course-title">コース：椿[つばき]</p>
+								<img class="course-image" src="images/course02.jpg" alt="">
+								<p class="course-text p-top1">
+									ペシャルコース サーロイン握りからしめの究極飯まで。 彩香を味わい尽くす、お得なコース。
+								</p>
+								<p class="course-nedan">3600円(+税)</p>
+
+								<p class="course-shousai-btn2">コース詳細+</p>
+								<div class="course-shousai2 dsp-none">
+									<p class="course-daimoku">-前菜-</p>
+									<p class="course-sina">キムチ3種盛
+										サラダ
+									オードブル4種（ヒレの湯引きユッケ・イカ刺し・ゆで豚ポッサム・サーロイン握り）</p>
+									<p class="course-daimoku">-焼物-</p>
+									<p class="course-sina">特選サーロイン・特選ハラミ
+									厚切り上タン塩・カルビ・ヒレ・大海老・ホルモン</p>
+									<p class="course-daimoku">-お食事-</p>
+									<p class="course-sina">サーロインと濃厚卵の究極小鉢飯</p>
+									<p class="course-daimoku">-デザート-</p>
+									<p class="course-sina">本日のデザート</p>
+									<p class="arerugi">アレルギー表示：卵、乳、小麦、海老</p>
+								</div>
+							</div>
+						</div>
+						<div class="course-3 contents-small">
+							<p class="course-title">コース：楓[かえで]</p>
+							<img class="course-image" src="images/course03.jpg" alt="">
+							<p class="course-text p-top1">
+								プレミアムコース 彩香特選厚切りタン塩に、特上肉とロブスターも味わえる。
+							</p>
+							<p class="course-nedan">4500円(+税)</p>
+
+							<p class="course-shousai-btn3">コース詳細+</p>
+							<div class="course-shousai3 dsp-none">
+								<p class="course-daimoku">-前菜-</p>
+								<p class="course-sina">キムチ3種盛
+									サラダ
+								オードブル5種（ヒレの湯引きユッケ・イカ刺し・ゆで豚ポッサム・握り2種）</p>
+								<p class="course-daimoku">-焼物-</p>
+								<p class="course-sina">特選サーロイン・特選ハラミ
+								特選厚切りタン塩 - 特厚 - ・特選ロース・特上カルビ・ロブスター</p>
+								<p class="course-daimoku">-お食事-</p>
+								<p class="course-sina">サーロインと濃厚卵の究極小鉢飯</p>
+								<p class="course-daimoku">-デザート-</p>
+								<p class="course-sina">本日のデザート・コーヒー</p>
+								<p class="arerugi">アレルギー表示：卵、乳、小麦、海老</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- メニュー -->
+				<div id="menu">
+					<div class="menu center pd-5 clr-white">
+						<h1 class="p-bottom3 text-shadow2">メニュー</h1>
+						<div class="bg-white-50">
+							<div class="contents">
+								<div class="row text-shadow2">
+									<!-- メニュー -->
+									<div class="assignment-source col-6 col-sm-3">
+										<img class="assignment-img" src="images/a0249.jpg" alt="">
+										<p class="assignment-title">ネギま</p>
+										<p class="assignment-price">120円</p>
+										<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+									</div>
+									<div class="assignment-source col-6 col-sm-3">
+										<img class="assignment-img" src="images/a0249.jpg" alt="">
+										<p class="assignment-title">ネギま</p>
+										<p class="assignment-price">120円</p>
+										<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+									</div>
+									<div class="assignment-source col-6 col-sm-3">
+										<img class="assignment-img" src="images/a0249.jpg" alt="">
+										<p class="assignment-title">ネギま</p>
+										<p class="assignment-price">120円</p>
+										<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+									</div>
+									<div class="assignment-source col-6 col-sm-3">
+										<img class="assignment-img" src="images/a0249.jpg" alt="">
+										<p class="assignment-title">ネギま</p>
+										<p class="assignment-price">120円</p>
+										<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
+									</div>
+								</div>
+								<div id="menu-plus" class="row text-shadow2"></div>
+
+								<p id="motto">もっと見る +</p>
+								<p id="toziru">閉じる -</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="news">
+					<div class="center pd-5 clr-news">
+						<h1>新着情報</h1>
+
+						<div id="carouselExampleControls" class="carousel slide contents" data-ride="carousel">
+
+							<div class="carousel-inner insta-card"></div>
+
+							<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="otoiawase">
+					<div class="bg-white">
+						<div class="contents">
+							<h1>アクセス・お問い合わせ</h1>
+							<!-- グーグルマップ -->
+							<div class="gmap m-top2">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.348385590416!2d130.82617411549865!3d32.86250058692829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540e57241f4da5b%3A0xb4472c7d8e07a72d!2z6I-K6Zm955S65b255aC0!5e0!3m2!1sja!2sjp!4v1578992607440!5m2!1sja!2sjp" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" id="aaa"></iframe>
+							</div>
+							<div class="renraku m-top2">
+								<p class="p-top1">TEL：<a href="tel:000-1234-5678">000-1234-5678</a></p>
+								<p id="mailform">MAIL +</p>
+
+								<!-- googleformお問い合わせ用 -->
+								<div class="googleform">			
+									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfE_G5ZjoOKBDCbDGdm5zjm-pyAlh6zIK3SHSmHOdRsIaIZ9w/viewform?embedded=true" width="640" height="812" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- フッター -->
+			<footer class="p-top5">
+				<div class="footer_youso"><img src="material/yakitori_ayaka_logo_black.png" alt="お店のロゴ">
+					<p class="p-top3">〒58s-45s54 住所xxxx-x</p>
+					<p>TEL：<a href="tel:000-1s34-5s78">000-1s34-5s78</a></p>
+					<p>MAIL：aaa@aaa.com</p>
+				</div>
+				<div class="site-info">
+					<i class="far fa-copyright mr-2" aria-hidden="true"></i>
+					<small>2020 yakitori ayaka</small>
+				</div>
+			</footer>
+
+			<!-- メニュー詳細画面 -->
+			<div class="shosai">
+				<div class="shosai-contents">
+					<img class="shosai-logo" src="material/yakitori_ayaka_logo_black.png" alt="ロゴ">
+					<img class="item-img" src="画像が代入される" alt="">
+					<div class="scroll">
+						<p class="item-title">タイトルが代入される</p>
+						<p class="item-price">値段が代入される</p>
+						<p class="item-text">説明文が代入される</p>
 					</div>
 				</div>
 			</div>
-			<div class="course-3 contents-small">
-				<p class="course-title">コース：楓[かえで]</p>
-				<img class="course-image" src="images/course03.jpg" alt="">
-				<p class="course-text p-top1">
-					プレミアムコース 彩香特選厚切りタン塩に、特上肉とロブスターも味わえる。
-				</p>
-				<p class="course-nedan">4500円(+税)</p>
-				
-				<p class="course-shousai-btn3">コース詳細+</p>
-				<div class="course-shousai3 dsp-none">
-					<p class="course-daimoku">-前菜-</p>
-					<p class="course-sina">キムチ3種盛
-						サラダ
-					オードブル5種（ヒレの湯引きユッケ・イカ刺し・ゆで豚ポッサム・握り2種）</p>
-					<p class="course-daimoku">-焼物-</p>
-					<p class="course-sina">特選サーロイン・特選ハラミ
-					特選厚切りタン塩 - 特厚 - ・特選ロース・特上カルビ・ロブスター</p>
-					<p class="course-daimoku">-お食事-</p>
-					<p class="course-sina">サーロインと濃厚卵の究極小鉢飯</p>
-					<p class="course-daimoku">-デザート-</p>
-					<p class="course-sina">本日のデザート・コーヒー</p>
-					<p class="arerugi">アレルギー表示：卵、乳、小麦、海老</p>
-				</div>
-			</div>
-		</div>
-		
-		<!-- メニュー -->
-		<div class="menu center pd-5 clr-white">
-			<h1 class="p-bottom3">メニュー</h1>
-			<div class="bg-white-50">
-				<div class="contents">
-					<div class="row">
-						<!-- メニュー -->
-						<div class="assignment-source col-6 col-sm-3">
-							<img class="assignment-img" src="images/a0249.jpg" alt="">
-							<p class="assignment-title">ネギま</p>
-							<p class="assignment-price">120円</p>
-							<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
-						</div>
-						<div class="assignment-source col-6 col-sm-3">
-							<img class="assignment-img" src="images/a0249.jpg" alt="">
-							<p class="assignment-title">ネギま</p>
-							<p class="assignment-price">120円</p>
-							<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
-						</div>
-						<div class="assignment-source col-6 col-sm-3">
-							<img class="assignment-img" src="images/a0249.jpg" alt="">
-							<p class="assignment-title">ネギま</p>
-							<p class="assignment-price">120円</p>
-							<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
-						</div>
-						<div class="assignment-source col-6 col-sm-3">
-							<img class="assignment-img" src="images/a0249.jpg" alt="">
-							<p class="assignment-title">ネギま</p>
-							<p class="assignment-price">120円</p>
-							<p class="assignment-text">説明文説明文説明文説明文説明文説明文</p>
-						</div>
-					</div>
-					<div id="menu-plus" class="row"></div>
-					
-					<p id="motto">もっと見る +</p>
-				</div>
-			</div>
-		</div>
+			<div class="shosai-out"></div>
 
-		<div id="news" class="center pd-5 clr-black bg-white">
-			<h1 class="p-bottom3">新着情報</h1>
-			
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-				
-				<div class="carousel-inner insta-card"></div>
-
-				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+			<!-- 背景画像 -->
+			<div id="haikei">
+				<img src="images/IMGP2560.jpg" alt="">
 			</div>
 
-		</div>
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+			<!-- bxSlider JS -->
+			<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-	</div>
+			<!-- inview JS -->
+			<script src="assets/inview/jquery.inview.min.js"></script>
 
-	<!-- フッター -->
-	<footer class="p-top5">
-		<div class="footer_youso"><img src="material/yakitori_ayaka_logo_black.png" alt="お店のロゴ">
-			<p class="p-top3">〒58s-45s54 住所xxxx-x</p>
-			<p>TEL：<a href="tel:000-1s34-5s78">000-1s34-5s78</a></p>
-			<p>MAIL：aaa@aaa.com</p>
-		</div>
-		<div class="site-info">
-			<i class="far fa-copyright mr-2" aria-hidden="true"></i>
-			<small>2020 yakitori ayaka</small>
-		</div>
-	</footer>
-
-	<!-- メニュー詳細画面 -->
-	<div class="shosai">
-		<div class="shosai-contents">
-			<img class="shosai-logo" src="material/yakitori_ayaka_logo_black.png" alt="ロゴ">
-			<img class="item-img" src="画像が代入される" alt="">
-			<div class="scroll">
-				<p class="item-title">タイトルが代入される</p>
-				<p class="item-price">値段が代入される</p>
-				<p class="item-text">説明文が代入される</p>
-			</div>
+			<!-- my JS -->
+			<script src="assets/script.js"></script>
 		</div>
 	</div>
-	<div class="shosai-out"></div>
-	
-	<!-- 背景画像 -->
-	<div id="haikei">
-		<img src="images/IMGP2560.jpg" alt="">
-	</div>
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-	<!-- bxSlider JS -->
-	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-	<!-- inview JS -->
-	<script src="assets/inview/jquery.inview.min.js"></script>
-
-	<!-- my JS -->
-	<script src="assets/script.js"></script>
 </body>
-</html>
+</html>	

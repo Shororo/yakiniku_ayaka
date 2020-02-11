@@ -94,6 +94,12 @@ $(window).scroll(function(){
 
 
 $(function(){
+
+  //ローディングが終わったら画面表示
+  Pace.on('done', function(){
+    $('.wrap').fadeIn();
+  });
+
 		//ボタン全般処理
    $(".btn-c").on('click',function() {
     if($(".btn-c").css("color") == "rgb(255, 255, 255)"){
@@ -168,13 +174,22 @@ $(function(){
       //メニューをさらに読み込む
       $("#motto").on("click", function(){ 
         $("#menu-plus").load("menu.html");
+        $("#motto").css("display","none");
+        $("#toziru").css("display","block");
       });
       //メニューを閉じる
       $("#toziru").on("click", function(){
-        $("#menu-plus").empty();
+        $("#menu-plus").remove();
+        $("#motto").css("display","block");
+        $("#toziru").css("display","none");
       });
 
-});
+      //メールフォームの出現
+      $("#mailform").on("click",function() {
+        $(".googleform").slideToggle();
+      });                         
+
+    });
 
       // instagram
       $(function () {
@@ -215,10 +230,10 @@ $(function(){
 
                 this.html = `
 
-                <div class="carousel-item">
+                <div class="carousel-item sinchaku-item">
                 <img class="d-block w-100" src="${url}" alt="First slide">
-                <div class="carousel-caption d-md-block">
-                <p>${text}</p>
+                <div class="carousel-caption d-md-block w-100">
+                <p class="clr-black">${text}</p>
                 </div>
                 </div>
 
@@ -239,6 +254,6 @@ $(function(){
     });
 
 //マウスが動いたら新着情報をアクティブに！
-$(window).on('scroll',function(){
-      $(".carousel-item:first-of-type").addClass("active");
-      });
+$(window).one('scroll',function(){
+  $(".carousel-item:first-of-type").addClass("active");
+});

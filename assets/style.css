@@ -201,6 +201,9 @@ img {
 .text-shadow{
 filter: drop-shadow(2px 2px 1px rgba(0,0,0,1));
 }
+.text-shadow2{
+  text-shadow: 2px 2px 2px black;
+}
 .flex-r{
   display: flex; 
   flex-wrap: wrap;
@@ -572,17 +575,68 @@ nav a:hover{
 /* メニューウィンドウここから */
 
 
+/* インスタニュース */
+.clr-news{
+  background-color: #ffdee6;
+}
+#toziru{
+  display: none;
+}
+.sinchaku-item{
+  height: 70vh;
+  position: relative;
+}
+.sinchaku-item img{
+  height: 40%;
+}
+.sinchaku-item .carousel-caption{
+  height: 50%;
+  overflow: scroll;
+}
+.carousel-caption{
+  position: absolute;
+  transform: translateX(-50%); 
+  top: 50%;
+  left: 50%;
+}
+/* インスタニュースここまで */
+
+/*マップ*/
+.gmap {
+height: 0;
+overflow: hidden;
+padding-bottom: 56.25%;
+position: relative;
+}
+.gmap iframe {
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+}
+/*マップここまで*/
 
 
-
-
-
+/*メール*/
+.googleform{
+    display: none;
+    text-align: center;
+}
+.googleform iframe{
+    max-width: 100%;
+}
+/*メールここまで*/
 
 /* footerここから */
 footer{
   background-color: rgba(255, 255, 255, 1);
   text-align:center;
   font-size: 1.5rem;
+  background-color: #ffdee6;
+}
+footer p{
+  margin-bottom: 0rem;
 }
 footer a{
   font-size: 1.5rem;
@@ -723,3 +777,46 @@ footer a{
 }
 }
 /* メニュー詳細画面ここまで */
+
+/*ローディング画面*/
+.pace-running .wrap{
+  display: none;
+}
+#loading-window{
+  background-color: #fbbdcc;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -2;
+}
+
+#otoiawase h1{
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+#otoiawase a{
+  font-size: 1.5rem;
+}
+
+#system{
+  margin-top:-8.5vh;
+  padding-top:8.5vh;
+}
+#course{
+  margin-top:-8.5vh;
+  padding-top:8.5vh;
+}
+#menu{
+  margin-top:-8.5vh;
+  padding-top:8.5vh;
+}
+#news{
+  margin-top:-8.5vh;
+  padding-top:8.5vh;
+}
+#otoiawase{
+  margin-top:-8.5vh;
+  padding-top:8.5vh;
+}
