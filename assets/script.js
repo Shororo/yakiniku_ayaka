@@ -178,7 +178,7 @@ $(function(){
         $("#toziru").css("display","block");
       });
       $("#motto").on("click", function(){ 
-        $("#menu-plus").css("display","block");
+        $("#menu-plus").css("display","flex");
         $("#motto").css("display","none");
         $("#toziru").css("display","block");
       });
