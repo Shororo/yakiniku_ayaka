@@ -174,18 +174,14 @@ $(function(){
       //メニューをさらに読み込む
       $("#motto").one("click", function(){ 
         $("#menu-plus").load("menu.html");
-        $("#menu-plus").css("display","block");
         $("#motto").css("display","none");
         $("#toziru").css("display","block");
-        var mottohantei = 1;
       });
-      if(mottohantei == 1){
-      $("#motto").one("click", function(){ 
+      $("#motto").on("click", function(){ 
         $("#menu-plus").css("display","block");
         $("#motto").css("display","none");
         $("#toziru").css("display","block");
       });
-  }
       //メニューを閉じる
       $("#toziru").on("click", function(){
         $("#menu-plus").css("display","none");
@@ -195,7 +191,7 @@ $(function(){
 
       //メールフォームの出現
       $("#mailform").on("click",function() {
-        $(".googleform").slideDown();
+        $(".googleform").slideToggle();
         $("#mailform").css("display","none");
         $("#mailform2").css("display","block");
       });
