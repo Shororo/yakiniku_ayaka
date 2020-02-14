@@ -97,8 +97,7 @@ $(function(){
 
   //ローディングが終わったら画面表示
   Pace.on('done', function(){
-    $('.wrap').fadeIn();
-    $("#loading-window").css("display","none");
+    $("#loading-window").fadeOut();
   });
 
 		//ボタン全般処理
@@ -173,11 +172,20 @@ $(function(){
       });
       
       //メニューをさらに読み込む
-      $("#motto").on("click", function(){ 
+      $("#motto").one("click", function(){ 
         $("#menu-plus").load("menu.html");
+        $("#menu-plus").css("display","block");
+        $("#motto").css("display","none");
+        $("#toziru").css("display","block");
+        var mottohantei = 1;
+      });
+      if(mottohantei == 1){
+      $("#motto").one("click", function(){ 
+        $("#menu-plus").css("display","block");
         $("#motto").css("display","none");
         $("#toziru").css("display","block");
       });
+  }
       //メニューを閉じる
       $("#toziru").on("click", function(){
         $("#menu-plus").css("display","none");
