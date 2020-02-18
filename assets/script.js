@@ -52,9 +52,9 @@ $(window).on('load',function(){
         $(window).on('scroll',function(){
           winScrollTop = $(this).scrollTop();
           if (winScrollTop > startPos) {
-            $('header').slideUp();
+            $('header:not(:animated)').slideUp();
           } else {
-            $('header').slideDown();
+            $('header:not(:animated)').slideDown();
           }
           startPos = winScrollTop;
         });
@@ -131,13 +131,13 @@ $(function(){
   });
   // コース詳細ボタンを押したら
   $(".course-shousai-btn1").on('click',function() {
-    $(".course-shousai1").slideToggle();
+    $(".course-shousai1:not(:animated)").slideToggle();
   });
   $(".course-shousai-btn2").on('click',function() {
-    $(".course-shousai2").slideToggle();
+    $(".course-shousai2:not(:animated)").slideToggle();
   });
   $(".course-shousai-btn3").on('click',function() {
-    $(".course-shousai3").slideToggle();
+    $(".course-shousai3:not(:animated)").slideToggle();
   });
 
 	//コンテンツのスライド表示
@@ -205,64 +205,40 @@ $(function(){
 
       // instagram
       $(function () {
-
         try {
-
         // インスタのIDを入れようね
-
         this.name = "via_jpn";
-
         $.ajax('https://www.instagram.com/' + this.name + '/', {
-
           timeout: 2000,
-
           datatype: 'html'
-
         }).then(function (data) {
-
           json_string = data.split("window._sharedData = ")[1];
-
           json_string = json_string.split("};</script>")[0] + "}";
-
           this.Arrya_data = JSON.parse(json_string);
-
           let datas = this.Arrya_data.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges;
 
           for (i in datas) {
-
                 // 画像URL取得
-
                 var url = datas[i].node.display_url;
 
                 // テキスト取得
-
                 var text = datas[i].node.edge_media_to_caption.edges[0].node.text;
 
-
-
                 this.html = `
-
                 <div class="carousel-item sinchaku-item">
                 <img class="d-block w-100" src="${url}" alt="First slide">
                 <div class="carousel-caption d-md-block w-100">
                 <p class="clr-black">${text}</p>
                 </div>
                 </div>
-
                 `;
-
+                
                 $(".insta-card").append(this.html);
-
               }
-
             });
-
       } catch (error) {
-
         alert(error);
-
       }
-
     });
 
 //マウスが動いたら新着情報をアクティブに！
